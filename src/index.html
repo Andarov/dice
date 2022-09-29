@@ -4,12 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modal</title>
+    <title></title>
     <link rel="stylesheet" href="../dist/output.css">
 </head>
-<body>
-    
-    <p class="bg-green-500 p-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt culpa earum rerum fugit exercitationem hic explicabo? Iste vero neque nulla, asperiores, eum laborum maiores, commodi distinctio maxime quidem fugiat dolor.</p>
+<body class="bg-red-400">
 
+    <div class="container w-full max-w-4xl mx-auto px-5">
+        
+        <div class="flex justify-end pt-20 mb-5">
+            <!-- Retry button -->
+            <button id="retry" class="px-3 py-1.5 bg-white rounded font-medium">Yangidan boshlash</button>
+        </div>
+
+        <div class="flex mb-20 relative">
+            <!-- Get point button -->
+            <button id="get-point" class="absolute left-1/2 -ml-10 sm:-ml-14 px-3 py-1.5 bg-white rounded font-medium">Ballni olish</button>
+            <!-- Gaming button -->
+            <button id="game" class="absolute left-1/2 -ml-8 sm:-ml-10 bottom-0 px-3 py-1.5 bg-white rounded font-medium">O'ynash</button>
+
+            <!-- Random number -->
+            <div id="random" class="absolute left-1/2 top-1/2 -mt-12 -ml-5 font-bold text-6xl">0</div>
+            
+            <!-- Player-one -->
+            <div id="player-one" class="flex flex-col justify-center items-center w-full md:w-1/2 px-5 py-16 bg-red-200">
+                <div class="mb-10 space-y-4">
+                    <h3 class="capitalize font-bold text-2xl text-center">Player one</h3>
+                    <h3 id="player-one-total" class="font-bold text-2xl text-center">0</h3>
+                </div>
+
+                <!-- Current button -->
+                <div class="w-36 flex justify-between items-center space-x-3 bg-green-500 px-6 py-3 rounded">
+                    <span class="text-lg font-medium text-center">Current</span>
+                    <span id="player-one-current" class="text-lg font-medium text-center text-white">0</span>
+                </div>
+            </div>
+
+            <!-- Player-two -->
+            <div id="player-two" class="flex flex-col justify-center items-center w-full md:w-1/2 px-5 py-16 bg-red-300">
+                <div class="mb-10 space-y-4">
+                    <h3 class="capitalize font-bold text-2xl text-center">Player two</h3>
+                    <h3 id="player-two-total" class="font-bold text-2xl text-center">0</h3>
+                </div>
+
+                <!-- Current button -->
+                <div class="w-36 flex justify-between items-center space-x-3 bg-green-500 px-6 py-3 rounded">
+                    <span class="text-lg font-medium text-center">Current</span>
+                    <span class="text-lg font-medium text-center text-white">0</span>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+    
+    <script src="./input.js"></script>
 </body>
 </html>
