@@ -10,11 +10,25 @@ const elPlayerTwoTotal = document.querySelector('#scores-1');
 const elPlayerOneCurrent = document.querySelector('#current-0');
 const elPlayerTwoCurrent = document.querySelector('#current-1');
 
-// Current numbers
-const scores = [0, 0]
-let currentOne = 0;
-let activePlayer = 0;
-let play = true;
+let scores, currentOne, activePlayer, play;
+
+const refresh = function() {
+    scores = [0, 0]
+    currentOne = 0;
+    activePlayer = 0;
+    play = true;
+    elRandom.textContent = 0;
+    elPlayerOneTotal.textContent = 0;
+    elPlayerTwoTotal.textContent = 0;
+    elPlayerOneCurrent.textContent = 0;
+    elPlayerTwoCurrent.textContent = 0;
+    elPlayerOne.classList.remove('winner')
+    elPlayerOne.classList.add('active')
+    elPlayerTwo.classList.remove('winner')
+    elPlayerTwo.classList.add('player-two')
+}
+
+refresh();
 
 // Switch funksiyasi
 const switchPlayer = function() {
@@ -59,14 +73,4 @@ elGetPoint.addEventListener('click', function() {
 })
 
 // Ynagilash
-elRetry.addEventListener('click', function() {
-    elRandom.textContent = 0;
-    elPlayerOneTotal.textContent = 0;
-    elPlayerTwoTotal.textContent = 0;
-    document.getElementById(`current-${activePlayer}`).textContent = 0;
-    currentOne = 0;
-    elPlayerOne.classList.remove('winner')
-    elPlayerOne.classList.add('active')
-    elPlayerTwo.classList.remove('winner')
-    elPlayerTwo.classList.add('player-two')
-})
+elRetry.addEventListener('click', refresh)
