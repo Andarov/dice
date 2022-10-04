@@ -790,6 +790,18 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.active {
+  background-color: rgb(254, 202, 202);
+}
+
+.player-two {
+  background-color: rgb(255, 184, 184);
+}
+
+.winner {
+  background-color: rgb(137, 237, 87);
+}
+
 @media (min-width: 640px) {
   .sm\:-ml-14 {
     margin-left: -3.5rem;
