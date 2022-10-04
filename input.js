@@ -35,7 +35,8 @@ const switchPlayer = function() {
     document.getElementById(`current-${activePlayer}`).textContent = 0;
     currentOne = 0;
     activePlayer = activePlayer === 0 ? 1 : 0;
-    elPlayerOne.classList.toggle('active');
+    
+    console.log(elPlayerOne.classList.toggle('active'));
     elPlayerTwo.classList.toggle('active');
 }
 

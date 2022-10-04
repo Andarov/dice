@@ -4,7 +4,7 @@
 
 
 .active {
-    background-color: rgb(254, 202, 202);
+    background-color: rgb(231, 87, 87) !important;
 }
 
 .player-two {
@@ -12,5 +12,5 @@
 }
 
 .winner {
-    background-color: rgb(137, 237, 87);
+    background-color: rgb(137, 237, 87) !important;
 }
