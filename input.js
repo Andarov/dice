@@ -61,7 +61,7 @@ elGetPoint.addEventListener('click', function() {
         scores[activePlayer] += currentOne;
         document.getElementById(`scores-${activePlayer}`).textContent = scores[activePlayer];
     
-        if(scores[activePlayer] >= 30) {
+        if(scores[activePlayer] >= 100) {
             play = false;
             document.getElementById(`scores-${activePlayer}`).textContent = 'Player win';
             document.getElementById(`player-${activePlayer}`).classList.add('winner');
